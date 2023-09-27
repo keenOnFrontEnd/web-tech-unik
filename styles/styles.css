@@ -24,7 +24,7 @@ header li a {
     text-decoration: none;
 }
 
-footer{
+footer {
     background-color: white;
     position: fixed;
     bottom: 0;
@@ -42,56 +42,110 @@ section {
     margin-top: 100px;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     height: 75dvh;
 }
+
 .informationPage {
     flex-direction: column;
 }
 
-tr:first-child, #time{
+tr:first-child,
+#time {
     background-color: rgb(0, 173, 173);
     color: white;
     text-align: center;
 }
+
 .trClasses {
     height: 50px;
     border: 1px solid rgb(175, 173, 173);
     text-align: center;
     background-color: rgb(170, 235, 170);
 }
+
 .trClassesPractice {
     height: 50px;
     border: 1px solid rgb(175, 173, 173);
     text-align: center;
     background-color: rgb(229, 235, 170);
 }
+
 tr:last-child {
     background-color: rgb(235, 180, 170);
     text-align: center;
 }
 
-input[type=text], input[type=email],input[type=password] {
-	appearance: none;
-	border: none;
-	outline: none;
-	border-bottom: .2em solid #E91E63;
-	background: rgba(#E91E63, .2);
-	border-radius: .2em .2em 0 0;
-	padding: .4em;
-	color: #E91E63;
+
+.form-container {
+    border: 1px solid #E91E63;
+    padding: 30px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 17px 11px rgba(233, 30, 98, 0.22);
+    -moz-box-shadow: 0px 0px 17px 11px rgba(233, 30, 98, 0.22);
+    box-shadow: 0px 0px 17px 11px rgba(233, 30, 98, 0.22);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100dvw - 550px);
 }
 
+.form-container > div {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    border: #E91E63 1px solid;
+    border-radius: 15px;
+    padding: 15px;
+    padding-left: 8px !important;
+    width: 65%;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: .2em solid #E91E63;
+    background: rgba(#E91E63, .2);
+    border-radius: .2em .2em 0 0;
+    padding: .4em;
+    color: #E91E63;
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+input::placeholder {
+    transition: color 0.5s ease-in-out;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    font-size: medium;
+    letter-spacing: 1px;
+}
+
+input:focus::placeholder {
+    color: #E91E63;
+}
+
+/* Описуємо анімаційні ключові кадри */
+
+
 input[type=submit] {
-	appearance: none;
-	border: .2em solid #E91E63;
-	background: hsl(0 0 0/0);
-	padding: .85em 1.5em;
-	color: #E91E63;
-	border-radius: 2em;
-	transition: 1s;
-	&:hover, &:focus, &:active {
-		background: #E91E63;
-		color: #fff;
-	}
+    appearance: none;
+    border: .2em solid #E91E63;
+    background: hsl(0 0 0/0);
+    padding: .85em 1.5em;
+    color: #E91E63;
+    border-radius: 2em;
+    transition: 1s;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: #E91E63;
+        color: #fff;
+    }
 }
